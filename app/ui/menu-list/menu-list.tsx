@@ -1,6 +1,3 @@
-// import { menuLoaded, menuRequested, menuError, addedToCart } from '../../actions';
-// import { Spinner } from 'reactstrap';
-// import Error from '../error';
 import { useEffect } from 'react';
 import { useAppSelector, useAppDispatch } from '../../redux/hooks';
 import type { RootState, AppDispatch } from '../../redux/store';

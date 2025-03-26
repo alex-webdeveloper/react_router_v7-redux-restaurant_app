@@ -8,14 +8,13 @@ import styles from './cart-table.module.scss';
 
 export default function CartTable() {
 	const dispatch: AppDispatch = useAppDispatch();
-	const { cart, orderSuccess, error } = useAppSelector(
+	const { cart, error } = useAppSelector(
 		(state: RootState) => state.restaurant
 	);
 	if (cart.length === 0) {
 		return <div className={styles.cart__title}> Ваша корзина пуста :(</div>;
 	}
 	if (error) {
-		// setTimeout(() => navigate('/'), 2000);
 		return (
 			<main className="pt-16 p-4 text-red-700 text-2xl text-center container mx-auto">
 				<h1>{error}</h1>
