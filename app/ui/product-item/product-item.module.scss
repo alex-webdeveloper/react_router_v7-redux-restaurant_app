@@ -1,0 +1,14 @@
+.product {
+    &_page {
+        display: flex;
+        width: 100%;
+        height: 100vh;
+    }
+
+    &_block {
+        margin: auto;
+        width: 700px;
+        height: 450px;
+        background-color: rgba(84, 84, 84, 0.8);
+    }
+} 

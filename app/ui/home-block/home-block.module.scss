@@ -1,0 +1,56 @@
+
+.home-content {
+    padding: 2rem;
+
+    &__hero {
+        text-align: center;
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        padding: 2rem;
+    }
+    &__hero-content {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    &__hero-title {
+        font-size: 3.5rem;
+        margin-bottom: 1.5rem;
+        font-weight: 700;
+    }
+    &__hero-subtitle {
+        font-size: 1.8rem;
+        margin-bottom: 2.5rem;
+        line-height: 1.4;
+    }
+
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 4rem 0;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    &__feature-card {
+        background: rgba(255, 255, 255, 0.9);
+        padding: 2rem;
+        border-radius: 15px;
+        text-align: center;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        &:hover {
+            transform: translateY(-5px);
+        }
+        h3 {
+            color: #2c3e50;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        p {
+            color: #7f8c8d;
+            line-height: 1.6;
+        }
+    }
+}
