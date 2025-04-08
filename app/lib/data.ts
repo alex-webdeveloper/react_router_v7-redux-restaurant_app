@@ -13,7 +13,6 @@ export interface Order {
 
 const API_BASE = 'http://localhost:3004';
 
-// Общий метод для выполнения GET-запросов
 async function getResource<T>(url: string): Promise<T> {
     const response = await fetch(`${API_BASE}${url}`);
     if (!response.ok) {
@@ -22,7 +21,6 @@ async function getResource<T>(url: string): Promise<T> {
     return await response.json();
 }
 
-// Получение всех элементов меню
 export async function getMenuItems(): Promise<MenuItem[]> {
     return await getResource<MenuItem[]>('/menu/');
 }
@@ -33,13 +31,11 @@ export async function getItem(id: number): Promise<MenuItem | undefined> {
     return menuItems.find((item) => item.id === id);
 }
 
-// Получение номера следующего заказа
 async function getOrderNumber(): Promise<number> {
     const orders = await getResource<Order[]>('/orders/');
     return orders.length + 1;
 }
 
-// Создание нового заказа
 export async function setOrder(order: MenuItem[]): Promise<boolean> {
     const orderNumber = await getOrderNumber();
     const newOrder: Order = {

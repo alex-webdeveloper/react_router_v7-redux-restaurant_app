@@ -4,5 +4,6 @@ import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
+  base: "/react_router_v7-redux-restaurant_app/",
   plugins: [tailwindcss(), reactRouter(), tsconfigPaths()],
 });

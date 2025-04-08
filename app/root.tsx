@@ -15,8 +15,10 @@ import SpinnerMain from './ui/spinner-main';
 import './app.css';
 import './main.scss';
 
+const basename = '/react_router_v7-redux-restaurant_app';
+
 export const links: Route.LinksFunction = () => [
-	{ rel: 'shortcut icon', href: '/favicon.ico', type: 'image/x-icon' },
+	{ rel: 'shortcut icon', href: basename + '/favicon.ico', type: 'image/x-icon' },
 	{ rel: 'preconnect', href: 'https://fonts.googleapis.com' },
 	{
 		rel: 'preconnect',
@@ -30,7 +32,7 @@ export const links: Route.LinksFunction = () => [
 ];
 
 export function HydrateFallback() {
-	return  <SpinnerMain />;
+	return <SpinnerMain />;
 }
 
 export function Layout({ children }: { children: React.ReactNode }) {
@@ -54,10 +56,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
 						}}>
 						<Header />
 						{children}
-						</div>
-						</Provider>
-						<ScrollRestoration />
-						<Scripts />
+					</div>
+				</Provider>
+				<ScrollRestoration />
+				<Scripts />
 			</body>
 		</html>
 	);

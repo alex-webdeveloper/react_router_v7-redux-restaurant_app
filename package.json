@@ -2,11 +2,14 @@
   "name": "react_router_v7-redux-restaurant_app",
   "private": true,
   "type": "module",
+  "homepage": "https://alex-webdeveloper.github.io/react_router_v7-redux-restaurant_app",
   "scripts": {
     "build": "react-router build",
     "dev": "react-router dev",
     "start": "react-router-serve ./build/server/index.js",
-    "typecheck": "react-router typegen && tsc"
+    "typecheck": "react-router typegen && tsc",
+    "postbuild": "cp build/client/index.html build/client/404.html",
+    "deploy": "gh-pages -d build/client"
   },
   "dependencies": {
     "@react-router/node": "^7.3.0",
@@ -29,6 +32,7 @@
     "@types/react-dom": "^19.0.1",
     "@types/react-redux": "^7.1.34",
     "autoprefixer": "^10.4.21",
+    "gh-pages": "^6.3.0",
     "react-router-devtools": "^1.1.0",
     "sass-embedded": "^1.86.0",
     "tailwindcss": "^4.0.15",

@@ -11,7 +11,7 @@ export function MenuListItem({ item, onAddToCart }: MenuListItemProps) {
 
 	return (
 		<li className="menu__item">
-			<div className="menu__title">{title}</div>
+			<h2 className="menu__title">{title}</h2>
 			<Link to={`/menu/${id}`}>
 				<img className="menu__img" src={url} alt={title}></img>
 			</Link>

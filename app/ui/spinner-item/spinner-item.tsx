@@ -1,4 +1,4 @@
-import { Spinner} from 'reactstrap';
+import { Spinner } from 'reactstrap';
 
 export default function SpinnerItem() {
 

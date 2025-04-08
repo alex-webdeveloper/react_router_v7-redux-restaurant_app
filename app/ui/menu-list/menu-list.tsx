@@ -10,7 +10,7 @@ import styles from './menu-list.module.scss';
 export default function MenuList() {
 	const dispatch: AppDispatch = useAppDispatch();
 	const { menu, loading, error } = useAppSelector((state: RootState) => state.restaurant);
-
+	
     useEffect(() => {
         if (menu.length < 2) dispatch(fetchMenu());
     }, [dispatch]);
@@ -18,9 +18,9 @@ export default function MenuList() {
     if (loading) return <SpinnerItem />;
     if (error) {
 		return (
-			<main className="pt-16 p-4 text-red-700 text-2xl text-center container mx-auto">
+			<div className="pt-16 p-4 text-red-700 text-2xl text-center container mx-auto">
 				<h1>{error}</h1>
-			</main>
+			</div>
 		);
 	}
 

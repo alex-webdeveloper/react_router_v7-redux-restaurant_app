@@ -1,5 +1,7 @@
 # Welcome to React Router v7!
-the database is local and is located locally in the file src/db.json
+react_router_v7-app_posts [demo](https://alex-webdeveloper.github.io/react_router_v7-redux-restaurant_app)
+Then launching a local server for operation db: % json-server --watch  app/db.json --port 3004
+The database is local and is located locally in the file app/db.json
 
 ## Getting Started
 launch db: cd react_router_v7-redux-restaurant_app
@@ -21,3 +23,6 @@ Create a production build:
 ```bash
 npm run build
 ```
+## Deploymen on gh-pages
+npm run build ls build/client/404.html
+npm run deploy

@@ -93,9 +93,6 @@ const restaurantSlice = createSlice({
 });
 
 export const {
-    // menuLoaded,
-    // menuRequested,
-    // menuError,
     addItemToCart,
     deleteFromCart
 } = restaurantSlice.actions;

@@ -7,15 +7,15 @@ export interface MenuItem {
 }
 
 export interface CartItem extends MenuItem {
-    qtty: number; // Количество товара в корзине
+    qtty: number;
 }
 
 export interface RestaurantState {
-    menu: MenuItem[]; // Меню товаров
-    loading: boolean; // Флаг загрузки
-    cart: CartItem[]; // Корзина товаров
-    totalPrice: number; // Общая стоимость товаров в корзине
-    error: string | null; // Ошибка загрузки
+    menu: MenuItem[];
+    loading: boolean;
+    cart: CartItem[];
+    totalPrice: number;
+    error: string | null;
     orderSuccess: boolean;
 }
 export interface Order {
