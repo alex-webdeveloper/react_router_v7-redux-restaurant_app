@@ -24,5 +24,4 @@ Create a production build:
 npm run build
 ```
 ## Deploymen on gh-pages
-npm run build ls build/client/404.html
 npm run deploy
