@@ -3,17 +3,17 @@ import { Link  } from 'react-router';
 import { useAppSelector } from '~/redux/hooks';
 import type { RootState  } from '~/redux/store';
 import style from './header.module.scss';
+import { BASE_PATH } from '~/lib/constants';
 
 export default function Header() {
-    const { totalPrice } = useAppSelector((state: RootState) => state.restaurant);
-    const basename = '/react_router_v7-redux-restaurant_app'; 
+    const { totalPrice } = useAppSelector((state: RootState) => state.restaurant); 
 
     return (
         <>
             <header className={style.header}>
-                <Link to={`${basename}/`} className={style.header__link}>Home</Link>
-                <Link to={`${basename}/menu`} className={style.header__link}>Menu</Link>
-                <Link to={`${basename}/cart`} className={style.header__link}>
+                <Link to={`${BASE_PATH}/`} className={style.header__link}>Home</Link>
+                <Link to={`${BASE_PATH}/menu`} className={style.header__link}>Menu</Link>
+                <Link to={`${BASE_PATH}/cart`} className={style.header__link}>
                     <img className={style.header__cart} src={cartIcon} alt="cart"></img>
                     Total: {totalPrice} $
                 </Link>

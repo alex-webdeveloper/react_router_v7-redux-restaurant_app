@@ -12,13 +12,12 @@ import Background from '/food-bg.jpg';
 import type { Route } from './+types/root';
 import Header from './ui/header';
 import SpinnerMain from './ui/spinner-main';
+import { BASE_PATH } from './lib/constants';
 import './app.css';
 import './main.scss';
 
-const basename = '/react_router_v7-redux-restaurant_app';
-
 export const links: Route.LinksFunction = () => [
-	{ rel: 'shortcut icon', href: basename + '/favicon.ico', type: 'image/x-icon' },
+	{ rel: 'shortcut icon', href: BASE_PATH + '/favicon.ico', type: 'image/x-icon' },
 	{ rel: 'preconnect', href: 'https://fonts.googleapis.com' },
 	{
 		rel: 'preconnect',
